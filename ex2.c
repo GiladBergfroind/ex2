@@ -28,8 +28,6 @@ int main() {
                 scanf(" %c %c %c", &eye, &nose, &mouth);
                 printf("Enter face size:\n");
                 int size;
-
-            //asking the user for the size of the smile and continuing only if positive and even
                 while (scanf("%d", &size) && (size < 1 || size % 2 == 0)) {
                     printf("The face's size must be an odd and positive number, please try again:\n");
                 }
@@ -62,7 +60,7 @@ int main() {
                     printf("Only positive number is allowed, please try again:\n");
                 }
                 int temp = num;
-            //counting the amount of digits in the number
+            
                 while (temp > 0) {
                     digitCounter++;
                     temp /= 10;
@@ -71,7 +69,7 @@ int main() {
                     rightSum += num % 10;
                     num /= 10;
                 }
-            //getting rid of the number in the middle if the amount of digits is odd
+            
                 if (digitCounter % 2 == 1) num /= 10;
                 for (int i = 0; i < digitCounter / 2; i++) {
                     leftSum += num % 10;
